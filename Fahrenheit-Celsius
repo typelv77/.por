@@ -1,0 +1,56 @@
+programa {
+  logico reiniciar = verdadeiro
+    funcao reiniciar77(){
+    cadeia respostaReiniciar
+
+    escreva("\n\nQuer calcular novamente ? Digite 's' ou sim para cadastra novas notas, ou qualquer letra para finalizar!\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+  }
+  funcao verificaPrimo(){
+
+    caracter opcao
+    real fator1
+    real fator2
+
+
+       escreva("Calculo de Grau\n")
+       escreva("\nEscolha a operação:\n")
+       escreva("1 - Celsius (°C) para Fahrenheit (°F)\n")
+       escreva("2 - Fahrenheit (°F) para Celsius (°C)\n")
+       leia(opcao)
+       limpa()
+
+
+
+     se (opcao ==1) {
+      limpa()
+      escreva("Digite o valor de Celsius\n")
+      leia(fator1)
+      escreva("Resultado é:\t", (fator1*9/5 +32),"\t Fahrenheit")
+
+     }
+     se (opcao ==2) {
+      limpa()
+      escreva("Digite o valor de Fahrenheit\n")
+      leia(fator2)
+      escreva("Resultado é:\t", (fator2-32)*5/9 , "\t Celsius")
+    }
+    
+  }
+
+funcao inicio() {
+    enquanto(reiniciar){
+      verificaPrimo()
+    reiniciar77()
+      limpa()
+    }
+ }
+}
